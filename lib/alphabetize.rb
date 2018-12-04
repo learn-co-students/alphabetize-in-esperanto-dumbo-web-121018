@@ -1,3 +1,11 @@
+require 'pry'
 def alphabetize(arr)
-  # code here
+  alph = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".split('')
+  
+  arr.sort_by do |string|
+    letters = string.split('')
+    letters.map do |letter| 
+      alph.index(letter)
+    end
+  end
 end
